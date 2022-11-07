@@ -41,11 +41,9 @@ To successfully run this MongoDB Cluster module, you need the following:
     environment_name       = "aptible-mongo-tf"
     creator                = "alincoln"
     aptible_stack          = "my-stack"
-    primary_container_size = 512
-    primary_disk_size      = 10
     replica_count          = 2
-    replica_container_size = 512
-    replica_disk_size      = 10
+    container_size = 512
+    container_disk_size      = 10
     ```
 
 4. Run the Terraform module.
