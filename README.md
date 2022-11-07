@@ -62,9 +62,9 @@ To successfully run this MongoDB Cluster module, you need the following:
 | `create_environment` | Would you life to create a new environment or use existing one?  | `bool` | &#9745; |
 | `environment_name` | Name of the environment you'd like to use. | `string` | &#9745; |
 | `creator` | Name of the person creating this instance. E.G. 'jsmith, mmyers, alincoln' | `string` | &#9745; |
-| `aptible_stack` | Name of the stack you'd like to use when creating an environment. _Required if using create_environment._  | `string` | &#8999; |
-| `primary_container_size` | Size of the primary MongoDB instance container. | `number` | &#9745; |
-| `primary_disk_size` | Size of the primary MongoDB disk. | `number` | &#9745; |
+| `aptible_stack` | Name of the stack you'd like to use when creating an environment. _Required if using create_environment._  | `string` | &#9744; |
+| `primary_container_size` | Size of the primary MongoDB instance container. _Refer to [this doc](https://deploy-docs.aptible.com/docs/database-scaling#ram-scaling) for valid sizes._ | `number` | &#9745; |
+| `primary_disk_size` | Size of the primary MongoDB disk. _Refer to [this doc](https://deploy-docs.aptible.com/docs/database-scaling#disk-scaling) for valid sizes._  | `number` | &#9745; |
 | `replica_count` | Number of replicas you'd wish to create. | `number` | &#9745; |
-| `replica_container_size` | Size of the replica MongoDB instance container. | `number` | &#9745; |
-| `replica_disk_size` | Size of the replica MongoDB disk. | `number` | &#9745; |
+| `replica_container_size` | Size of the replica MongoDB instance container. _Refer to [this doc](https://deploy-docs.aptible.com/docs/database-scaling#ram-scaling) for valid sizes._ | `number` | &#9745; |
+| `replica_disk_size` | Size of the replica MongoDB disk. _Refer to [this doc](https://deploy-docs.aptible.com/docs/database-scaling#disk-scaling) for valid sizes._ | `number` | &#9745; |
