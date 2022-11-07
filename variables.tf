@@ -18,27 +18,17 @@ variable "creator" {
   type        = string
 }
 
-variable "primary_container_size" {
-  description = "Size of the primary MongoDB instance container."
+variable "container_size" {
+  description = "Size of the MongoDB instance containers."
   type        = number
 }
 
-variable "primary_disk_size" {
-  description = "Size of the primary MongoDB disk."
+variable "container_disk_size" {
+  description = "Size of the MongoDB disks."
   type        = number
 }
 
 variable "replica_count" {
   description = "Number of replicas you'd like for the Mongo Cluster."
-  type        = number
-}
-
-variable "replica_container_size" {
-  description = "Size of the replica MongoDB instance container."
-  type        = number
-}
-
-variable "replica_disk_size" {
-  description = "Size of the replica MongoDB disk."
   type        = number
 }

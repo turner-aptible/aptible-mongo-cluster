@@ -63,8 +63,10 @@ To successfully run this MongoDB Cluster module, you need the following:
 | `environment_name` | Name of the environment you'd like to use. | `string` | &#9745; |
 | `creator` | Name of the person creating this instance. E.G. 'jsmith, mmyers, alincoln' | `string` | &#9745; |
 | `aptible_stack` | Name of the stack you'd like to use when creating an environment. _Required if using create_environment._  | `string` | &#9744; |
-| `primary_container_size` | Size of the primary MongoDB instance container. _Refer to [this doc](https://deploy-docs.aptible.com/docs/database-scaling#ram-scaling) for valid sizes._ | `number` | &#9745; |
-| `primary_disk_size` | Size of the primary MongoDB disk. _Refer to [this doc](https://deploy-docs.aptible.com/docs/database-scaling#disk-scaling) for valid sizes._  | `number` | &#9745; |
-| `replica_count` | Number of replicas you'd wish to create. | `number` | &#9745; |
-| `replica_container_size` | Size of the replica MongoDB instance container. _Refer to [this doc](https://deploy-docs.aptible.com/docs/database-scaling#ram-scaling) for valid sizes._ | `number` | &#9745; |
-| `replica_disk_size` | Size of the replica MongoDB disk. _Refer to [this doc](https://deploy-docs.aptible.com/docs/database-scaling#disk-scaling) for valid sizes._ | `number` | &#9745; |
+| `container_size` | Size of the MongoDB instance containers. _Refer to [this doc](https://deploy-docs.aptible.com/docs/database-scaling#ram-scaling) for valid sizes._ | `number` | &#9745; |
+| `container_disk_size` | Size of the MongoDB container's disk. _Refer to [this doc](https://deploy-docs.aptible.com/docs/database-scaling#disk-scaling) for valid sizes._  | `number` | &#9745; |
+| `replica_count` | Number of replicas you'd wish to create. For considerations of fault tolerance consider the [MongoDB docs](https://www.mongodb.com/docs/manual/core/replica-set-architectures/#consider-fault-tolerance) for cluster fault tolerance. | `number` | &#9745; |
+
+## Considerations
+
+Replica membership can not be revoked without direct intervention on the cluster. However, if you are deprovisioning the cluster then it will remove all members.

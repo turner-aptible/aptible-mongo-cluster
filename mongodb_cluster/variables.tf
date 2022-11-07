@@ -34,13 +34,3 @@ variable "replica_count" {
   description = "Number of replicas you'd like for the Mongo Cluster."
   type = number
 }
-
-variable "replica_container_size" {
-  description = "Size of the replica MongoDB instance container."
-  type = number
-}
-
-variable "replica_disk_size" {
-  description = "Size of the replica MongoDB disk."
-  type = number
-}

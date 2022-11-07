@@ -11,13 +11,10 @@ module "mongodb_cluster" {
   creator = var.creator
 
   # Primary DB Conainter Size
-  primary_container_size = var.primary_container_size
+  container_size = var.container_size
   # Primary DB Disk Size
-  primary_disk_size = var.primary_disk_size
+  container_disk_size = var.container_disk_size
   # Replica Count
-  replica_count = var.replica_count
-  # Replica DB Conainter Size
-  replica_container_size = var.replica_container_size
-  # Replica DB Disk Size
-  replica_disk_size = var.replica_disk_size
+  # If your count is even for replica count it will add 1.
+  replica_count = var.replica_count % 2 == 0 ? var.replica_count + 1 : var.replica_count
 }
